@@ -1,32 +1,31 @@
-# README Generator
-        
+# README Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-        ## Table of Contents
-        * [Description](#description)
-            * [Deployed Application](#deployed-application)
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [License](#license)
-        * [Contributing](#contributing)
-        * [Tests](#test)
-        * [Questions](#questions)
-          
-        ## Description
-        
-        ### Deployed Application
-        <img src="deployed.gif" alt="gif of deployed page in use">
+## Table of Contents
+* [Description](#description)
+    * [Deployed Application](#deployed-application)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#test)
+* [Questions](#questions)
+    
+## Description
 
-        ## Installation
-        There are no tests to run for this project
+### Deployed Application
+<img src="deployed.gif" alt="gif of deployed page in use">
 
-        ## Usage
-        To use this project, you will want to clone the repository to your machine. Be sure to install dependencies using “npm i”. To run the program, enter “node index.js” on the command line. Answer the prompts to generate your README file.
+## Installation
+To install necessary dependencies, run the following command: npm i
 
-        ## License
-        This repository has a Apache 2.0 license. For more information on this license, please visit: https://choosealicense.com/licenses/     
-        
-        ## Contributing
-        Contributions to this project are welcome!
+## Usage
+To use this project, you will want to clone the repository to your machine. Be sure to install dependencies using “npm i”. To run the program, enter “node index.js” on the command line. Answer the prompts to generate your README file.
+
+## License
+This repository has a MIT license. For more information on this license, please visit: https://choosealicense.com/licenses/mit     
+
+## Contributing
+Contributions to this project are welcome!
         <ol>
             <li>Fork the Project</li>
             <li>Create a branch for your feature (git checkout -b feature/featureName)</li>
@@ -38,14 +37,13 @@
         Also feel free to open issues for the project.
         
 
-        ## Tests
-        
+## Tests
+There are no tests to run for this project
 
-        ## Questions
-        If you have any questions, please contact Aubrey Heim.
+## Questions
+If you have any questions, please contact Aubrey Heim.
 
-        GitHub: [aubrey-heim](https://github.com/aubrey-heim)
+GitHub: [aubrey-heim](https://github.com/aubrey-heim)
 
-        Email: [aubrey.l.heim@gmail.com](mailto:aubrey.l.heim@gmail.com)
-       
-        
+Email: [aubrey.l.heim@gmail.com](mailto:aubrey.l.heim@gmail.com)
+
