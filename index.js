@@ -95,16 +95,16 @@ inquirer
         let licenseURL = ""
         let licenseBadge = ""
 
-        if(response.license === "GNU GPLv3"){
+        if(response.license[0] === "GNU GPLv3"){
             licenseURL = "gpl-3.0"
             licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
-        } else if (response.license === "MIT") {
+        } else if (response.license[0] === "MIT") {
             licenseURL = "mit"
             licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-        } else if (response.license === "Apache 2.0"){
+        } else if (response.license[0] === "Apache 2.0"){
             licenseURL = "apache-2.0"
             licenseBadge = "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-        } else if (response.license === "isc") {
+        } else if (response.license[0] === "ISC") {
             licenseURL = "isc"
             licenseBadge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)"
         }
@@ -118,50 +118,50 @@ inquirer
         if (response.tests){
             response.tests = `To run tests on this project, run the following command: ${response.tests}`
         } else {
-            response.install = `There are no tests to run for this project`
+            response.tests = `There are no tests to run for this project`
         }
 
-        let page = `# ${response.title}
-        ${licenseBadge}
+        let page =    
+`# ${response.title} ${licenseBadge}
 
-        ## Table of Contents
-        * [Description](#description)
-            * [Deployed Application](#deployed-application)
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [License](#license)
-        * [Contributing](#contributing)
-        * [Tests](#test)
-        * [Questions](#questions)
-          
-        ## Description
-        
-        ### Deployed Application
-        <img src="${response.path}" alt="${response.file} of deployed page in use">
+## Table of Contents
+* [Description](#description)
+    * [Deployed Application](#deployed-application)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#test)
+* [Questions](#questions)
+    
+## Description
 
-        ## Installation
-        ${response.install}
+### Deployed Application
+<img src="${response.path}" alt="${response.file} of deployed page in use">
 
-        ## Usage
-        ${response.usage}
+## Installation
+${response.install}
 
-        ## License
-        This repository has a ${response.license} license. For more information on this license, please visit: https://choosealicense.com/licenses/${licenseURL}     
-        
-        ## Contributing
-        ${response.contribution}
+## Usage
+${response.usage}
 
-        ## Tests
-        ${response.tests}
+## License
+This repository has a ${response.license} license. For more information on this license, please visit: https://choosealicense.com/licenses/${licenseURL}     
 
-        ## Questions
-        If you have any questions, please contact ${response.name}.
+## Contributing
+${response.contribution}
 
-        GitHub: [${response.github}](https://github.com/${response.github})
+## Tests
+${response.tests}
 
-        Email: [${email}](mailto:${email})
-       
-        `
+## Questions
+If you have any questions, please contact ${response.name}.
+
+GitHub: [${response.github}](https://github.com/${response.github})
+
+Email: [${email}](mailto:${email})
+
+`
 
     fs.writeFile("README.md", page, function(err) {
 
