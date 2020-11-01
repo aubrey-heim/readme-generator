@@ -93,11 +93,20 @@ inquirer
         const {name, email, github, repo, title, description, path, file, install, usage, license, contribution, tests} = response
 
         let licenseURL = ""
+        let licenseBadge = ""
 
         if(response.license === "GNU GPLv3"){
             licenseURL = "gpl-3.0"
-        } else {
-            licenseURL = response.license[0].toLowerCase().split(" ").join("-")
+            licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+        } else if (response.license === "MIT") {
+            licenseURL = "mit"
+            licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+        } else if (response.license === "Apache 2.0"){
+            licenseURL = "apache-2.0"
+            licenseBadge = "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+        } else if (response.license === "isc") {
+            licenseURL = "isc"
+            licenseBadge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)"
         }
 
         if (response.install){
@@ -113,6 +122,7 @@ inquirer
         }
 
         let page = `# ${response.title}
+        ${licenseBadge}
 
         ## Table of Contents
         * [Description](#description)
