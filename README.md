@@ -19,7 +19,12 @@
 To install necessary dependencies, run the following command: npm i
 
 ## Usage
-To use this project:<ol>    <li>Clone the repository: git@github.com:aubrey-heim/readme-generator.git</li>    <li>Install the dependencies using “npm i”</li>    <li> Run the program using “node index.js” on the command line</li>    <li> Answer the prompts to generate your README file.</li></ol>
+To use this project:
+<ol>    
+   <li>Clone the repository: "git@github.com:aubrey-heim/readme-generator.git"</li>
+   <li>Install the dependencies using “npm i”</li>    <li> Run the program using “node index.js” on the command line</li>
+   <li> Answer the prompts to generate your README file.</li>
+</ol>
 
 ## License
 This repository has a MIT license. For more information on this license, please visit: https://choosealicense.com/licenses/mit     
