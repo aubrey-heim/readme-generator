@@ -15,6 +15,8 @@
 ### Deployed Application
 <img src="deployed.gif" alt="gif of deployed page in use">
 
+[View this video on Google Drive](https://drive.google.com/file/d/1dPZlqOdPRw7Fh5x3hulHmH__hH-ZJwn2/view)
+
 ## Installation
 To install necessary dependencies, run the following command: npm i
 
