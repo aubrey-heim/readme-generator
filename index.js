@@ -131,7 +131,7 @@ inquirer
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
-* [Tests](#test)
+* [Tests](#tests)
 * [Questions](#questions)
     
 ## Description
