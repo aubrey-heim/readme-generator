@@ -65,17 +65,17 @@ inquirer
         type: "input",
         message: "What do we need to know about contributing to the repository?",
         name: "contribution",
-        default: `Contributions to this project are welcome!
-        <ol>
-            <li>Fork the Project</li>
-            <li>Create a branch for your feature (git checkout -b feature/featureName)</li>
-            <li>Commit your changes (git commit -m'Your commit message')</li>
-            <li>Push your changes to the feature branch (git push origin feature/featureName)</li>
-            <li>Open a pull request</li>
-        </ol>
+        default: 
+`Contributions to this project are welcome!
+<ol>
+    <li>Fork the Project</li>
+    <li>Create a branch for your feature (git checkout -b feature/featureName)</li>
+    <li>Commit your changes (git commit -m'Your commit message')</li>
+    <li>Push your changes to the feature branch (git push origin feature/featureName)</li>
+    <li>Open a pull request</li>
+</ol>
 
-        Also feel free to open issues for the project.
-        `
+Also feel free to open issues for the project.`
     },
     {
         type: "input",
