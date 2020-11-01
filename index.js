@@ -5,7 +5,7 @@ inquirer
 .prompt([
     {
       type: "input",
-      message: "What is your name?",
+      message: "What is your full name?",
       name: "name"
     },
     {
@@ -27,7 +27,6 @@ inquirer
         type: "input",
         message: "What is the title of your project?",
         name: "title",
-        default: this.repo
     },
     {
         type: "input",
@@ -65,7 +64,18 @@ inquirer
     {
         type: "input",
         message: "What do we need to know about contributing to the repository?",
-        name: "contribution"
+        name: "contribution",
+        default: `Contributions to this project are welcome!
+        <ol>
+            <li>Fork the Project</li>
+            <li>Create a branch for your feature (git checkout -b feature/featureName)</li>
+            <li>Commit your changes (git commit -m'Your commit message')</li>
+            <li>Push your changes to the feature branch (git push origin feature/featureName)</li>
+            <li>Open a pull request</li>
+        </ol>
+
+        Also feel free to open issues for the project.
+        `
     },
     {
         type: "input",
@@ -80,10 +90,29 @@ inquirer
 
         console.log(response)
 
-        const {} = response
+        const {name, email, github, repo, title, description, path, file, install, usage, license, contribution, tests} = response
 
+        let licenseURL = ""
 
-        let page = `# TITLE
+        if(response.license === "GNU GPLv3"){
+            licenseURL = "gpl-3.0"
+        } else {
+            licenseURL = response.license[0].toLowerCase().split(" ").join("-")
+        }
+
+        if (response.install){
+            response.install = `To install necessary dependencies, run the following command: ${response.install}`
+        } else {
+            response.install = `There are no dependencies to install for this project`
+        }
+
+        if (response.tests){
+            response.tests = `To run tests on this project, run the following command: ${response.tests}`
+        } else {
+            response.install = `There are no tests to run for this project`
+        }
+
+        let page = `# ${response.title}
 
         ## Table of Contents
         * [Description](#description)
@@ -98,22 +127,32 @@ inquirer
         ## Description
         
         ### Deployed Application
-        <img src="FILE PATH" alt="IMAGE/GIF/VIDEO of deployed page in use">
+        <img src="${response.path}" alt="${response.file} of deployed page in use">
 
         ## Installation
+        ${response.install}
 
         ## Usage
+        ${response.usage}
 
-        ## License        
+        ## License
+        This repository has a ${response.license} license. For more information on this license, please visit: https://choosealicense.com/licenses/${licenseURL}     
         
         ## Contributing
+        ${response.contribution}
 
         ## Tests
+        ${response.tests}
 
         ## Questions
+        If you have any questions, please contact ${response.name}.
+
+        GitHub: [${response.github}](https://github.com/${response.github})
+
+        Email: [${email}](mailto:${email})
        
         `
-        
+
     fs.writeFile("README.md", page, function(err) {
 
     if (err) {
