@@ -135,6 +135,7 @@ Also feel free to open issues for the project.`
 * [Questions](#questions)
     
 ## Description
+${response.description}
 
 ### Deployed Application
 <img src="${response.path}" alt="${response.file} of deployed page in use">
