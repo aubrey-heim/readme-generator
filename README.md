@@ -11,6 +11,7 @@
 * [Questions](#questions)
     
 ## Description
+This project is the ninth homework assignment of the UW Coding Bootcamp. For this project I was asked to create a command line application using Node.js that would produce a professional README file. Using the Inquirer.js package, I created this application. This README was written with the use of the application. 
 
 ### Deployed Application
 <img src="deployed.gif" alt="gif of deployed page in use">
